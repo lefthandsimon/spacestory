@@ -1,0 +1,235 @@
+{
+    "interactionModel":{
+        "languageModel":{
+            "invocationName":"a space adventure",
+            "types":[
+              {
+                "values": [
+                  {
+                    "name": {
+                      "value": "Marc",
+                      "synonyms": ["Mark"]
+                    }
+                  }
+                ],
+                "name": "MARC"
+              },
+              {
+                "values": [
+                  {
+                    "name": {
+                      "value": "glue",
+                      "synonyms": []
+                    }
+                  },
+                  {
+                    "name": {
+                      "value": "banana",
+                      "synonyms": []
+                    }
+                  }
+                ],
+                "name": "BANANA_OR_GLUE"
+              },
+              {
+                "values": [
+                  {
+                    "name": {
+                      "value": "red",
+                      "synonyms": []
+                    }
+                  },
+                  {
+                    "name": {
+                      "value": "green",
+                      "synonyms": []
+                    }
+                  }
+                ],
+                "name": "RED_OR_GREEN"
+              },
+              {
+                "values": [
+                  {
+                    "name": {
+                      "value": "up",
+                      "synonyms": []
+                    }
+                  },
+                  {
+                    "name": {
+                      "value": "down",
+                      "synonyms": []
+                    }
+                  },
+                  {
+                    "name": {
+                      "value": "left",
+                      "synonyms": []
+                    }
+                  },
+                  {
+                    "name": {
+                      "value": "right",
+                      "synonyms": []
+                    }
+                  }
+                ],
+                "name": "UP_DOWN_LEFT_RIGHT"
+              }
+
+
+
+
+            ],
+            "intents":[
+                {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+                },
+                {
+                    "name":"MarcIntent",
+                    "slots":[
+                      {
+                          "name":"marc",
+                          "type":"MARC"
+                      }
+
+                    ],
+                    "samples":[
+                        "{marc}",
+                        "hello {marc}"
+                    ]
+                },
+                {
+                    "name":"NameIntent",
+                    "slots":[
+                        {
+                            "name":"name",
+                            "type":"AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples":[
+                        "{name}",
+                        "my name is {name}",
+                        "i am {name}",
+                        "I'm called {name}",
+                        "you can call me {name}",
+                        "I'm called {name}"
+                    ]
+                },
+                {
+                    "name":"LetMeInIntent",
+                    "slots":[
+
+                    ],
+                    "samples":[
+                        "let me in",
+                        "lemme in",
+                        "me in"
+                    ]
+                },
+                {
+                    "name":"RedOrGreenIntent",
+                    "slots":[
+                      {
+                            "name": "redOrGreen",
+                            "type": "RED_OR_GREEN"
+                      }
+
+
+                    ],
+                    "samples":[
+                        "{redOrGreen}"
+                    ]
+                },
+                {
+                    "name":"HowManyStarsIntent",
+                    "slots":[
+                      {
+                            "name": "stars",
+                            "type": "AMAZON.NUMBER"
+                      }
+
+
+                    ],
+                    "samples":[
+                        "{stars}",
+                        "a million",
+                        "a billion",
+                        "millions",
+                        "billions",
+                        "millions and millions",
+                        "thousands",
+                        "thousands and thousands",
+                        "hundreds and thousands",
+                        "lots",
+                        "lots and lots"
+                    ]
+                },
+                {
+                    "name":"UpDownLeftRightIntent",
+                    "slots":[
+
+
+                    ],
+                    "samples":[
+                        "up",
+                        "down",
+                        "left",
+                        "right",
+                        "go up",
+                        "go down",
+                        "go left",
+                        "go right"
+
+                    ]
+                },
+                {
+                    "name":"BananaOrGlueIntent",
+                    "slots":[
+                      {
+                          "name":"bananaOrGlue",
+                          "type":"BANANA_OR_GLUE"
+                      }
+
+
+                    ],
+                    "samples":[
+                        "{bananaOrGlue}",
+                        "the {bananaOrGlue}",
+                        "the {bananaOrGlue}",
+                        "use the {bananaOrGlue}",
+                        "use the {bananaOrGlue}",
+                        "try the {bananaOrGlue}",
+                        "try the {bananaOrGlue}",
+                        "I think the {bananaOrGlue}",
+                        "I think the {bananaOrGlue}"
+
+                    ]
+                },
+                {
+                    "name":"ParachuteIntent",
+                    "slots":[
+
+
+                    ],
+                    "samples":[
+                        "parachute",
+                        "chute"
+
+                    ]
+                }
+
+            ]
+        }
+    }
+}
